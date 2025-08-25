@@ -20,9 +20,8 @@ function Index() {
             <Banner />
           </Suspense>
           <div>즐겨찾기</div>
-          <Suspense>
-            <Service />
-          </Suspense>
+
+          <Service />
         </div>
         <footer className="h-[48px] border-t bg-white z-50">
           <div className="mx-auto max-w-[480px] h-full flex items-center justify-center">
