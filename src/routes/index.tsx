@@ -1,4 +1,7 @@
+import { Banner } from "@/entities/banner/ui/Banner";
+import { BannerLoadingSpinner } from "@/entities/banner/ui/BannerLoadingSpinner";
 import { createFileRoute } from "@tanstack/react-router";
+import { Suspense } from "react";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -12,7 +15,10 @@ function Index() {
           헤더영역
         </header>
         <div className="flex-1 overflow-y-scroll">
-          <div>슬라이더</div>
+          <Suspense fallback={<BannerLoadingSpinner />}>
+            <Banner />;
+          </Suspense>
+
           <div>즐겨찾기</div>
           <div>목록</div>
         </div>

@@ -1,17 +1,25 @@
-type Language = "en" | "ko";
+export type Language = "en" | "ko";
 
-type LocalizedOptional = Partial<Record<Language, string>>;
+export type LocalizedOptional = Partial<Record<Language, string>>;
 
-type ImageSet = {
+export type ImageSet = {
   default?: string;
 } & Partial<Record<Language, string>>;
 
-export type BannerItem = {
+export type BannerItemDto = {
   itemId: number;
   itemName: string;
   description?: LocalizedOptional;
   link?: LocalizedOptional;
   buttonText?: LocalizedOptional;
-  image: ImageSet; // 이미지는 반드시 존재
-  isBookmark: boolean;
+  image: ImageSet;
+};
+
+export type BannerItem = {
+  itemId: number;
+  itemName: string;
+  description: string;
+  link: string;
+  buttonText: string;
+  image: string;
 };
