@@ -1,10 +1,14 @@
-type DisplayConditioon = {
-  language: "all" | "ko" | "en";
-  os: "all" | "ios" | "android";
-  env: "all" | "dev" | "stage" | "prod";
+type Language = "ko" | "en";
+type OS = "ios" | "android";
+type Env = "dev" | "stage" | "prod";
+
+export type DisplayCondition = {
+  language: Language[];
+  os: OS[];
+  env: Env[];
 };
 
-export type serviceItem = {
+export type ServiceItem = {
   id: number;
   name: string;
   icon: string;
@@ -12,5 +16,5 @@ export type serviceItem = {
   englishDescription: string;
   koreanDescription: string;
   useableNetwork: string[];
-  displayCondition: DisplayConditioon;
+  displayCondition: DisplayCondition;
 };
