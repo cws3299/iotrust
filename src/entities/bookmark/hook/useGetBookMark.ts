@@ -24,6 +24,7 @@ export const useGetBookMark = (options?: Opts) => {
       (Array.isArray(rows) ? rows : [])
         .filter((dto) => shouldDisplay(dto.displayCondition, ctx))
         .map((dto) => toBookMarkItem(dto, ctx.language)),
+    retry: 2,
     ...options,
   });
 };

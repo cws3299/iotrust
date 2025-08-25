@@ -19,6 +19,7 @@ export const useGetBanners = (options?: Opts) => {
     queryKey: ["banner", lang],
     queryFn: getBannerDatas,
     select: (rows) => rows.map((r) => convertToClientBannerModel(r, lang)),
+    retry: 2,
     ...options,
   });
 };

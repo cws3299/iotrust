@@ -2,6 +2,10 @@ import axios from "axios";
 import type { BookMarkItemDto } from "../type/bookmark";
 
 export const getBookMarkDatas = async (): Promise<BookMarkItemDto[]> => {
+  if (Math.random() > 0.5) {
+    throw new Error();
+  }
+
   const res = await axios.get("/mockupData/bookmarkList.json");
   const data = res.data;
 

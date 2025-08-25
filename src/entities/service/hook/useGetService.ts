@@ -24,6 +24,7 @@ export const useGetServices = (options?: Opts) => {
         .filter((dto) => shouldDisplay(dto.displayCondition, ctx))
         .map((dto) => toServiceItem(dto, ctx.language));
     },
+    retry: 2,
     ...options,
   });
 };
