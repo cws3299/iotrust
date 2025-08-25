@@ -1,5 +1,6 @@
 import { Banner } from "@/entities/banner/ui/Banner";
 import { BannerLoadingSpinner } from "@/entities/banner/ui/BannerLoadingSpinner";
+import { BookMark } from "@/entities/bookmark/ui/BookMark";
 import { Service } from "@/entities/service/ui/Service";
 import { createFileRoute } from "@tanstack/react-router";
 import { Suspense } from "react";
@@ -11,7 +12,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="h-full w-full overflow-hidden bg-[#ffffff] antialiased">
-      <div className="h-full max-w-[375px] mx-auto bg-background flex flex-col">
+      <div className="h-full max-w-[375px] min-w-[375px] mx-auto bg-background flex flex-col">
         <header className="sticky top-0 z-50 h-[48px] mt-2 px-4 font-bold text-[20px] border-b">
           헤더영역
         </header>
@@ -19,7 +20,7 @@ function Index() {
           <Suspense fallback={<BannerLoadingSpinner />}>
             <Banner />
           </Suspense>
-          <div>즐겨찾기</div>
+          <BookMark />
 
           <Service />
         </div>

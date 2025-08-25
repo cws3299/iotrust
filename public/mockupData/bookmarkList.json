@@ -8,9 +8,9 @@
     "koreanDescription": "",
     "useableNetwork": [],
     "displayCondition": {
-      "language": "en",
-      "os": "ios",
-      "env": "all"
+      "language": ["en"],
+      "os": ["android"],
+      "env": ["dev", "prod"]
     }
   },
   {
@@ -22,9 +22,9 @@
     "koreanDescription": "OpenSea는 수집품, 게임 아이템, 디지털 아트와 같은 이더리움 기반의 디지털 상품 및 디지털 자산을 거래할 수 있는 마켓 플레이스입니다.",
     "useableNetwork": ["Ethereum", "Polygon"],
     "displayCondition": {
-      "language": "all",
-      "os": "all",
-      "env": "all"
+      "language": ["ko"],
+      "os": ["android"],
+      "env": ["dev", "prod"]
     }
   }
 ]
