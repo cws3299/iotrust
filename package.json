@@ -4,17 +4,29 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "vite --mode development",
+    "dev:stage": "vite --mode stage",
+    "dev:prod": "vite --mode production",
+    "build:dev": "vite build --mode development",
+    "build:stage": "tsc -b && vite build --mode stage",
+    "build:prod": "tsc -b && vite build --mode production",
+    "preview:dev": "vite preview --mode development",
+    "preview:stage": "vite preview --mode stage",
+    "preview:prod": "vite preview --mode production"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.12",
+    "@tanstack/react-query": "^5.85.5",
+    "@tanstack/react-router": "^1.131.27",
+    "@tanstack/react-router-devtools": "^1.131.27",
+    "axios": "^1.11.0",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^4.1.12"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
+    "@tanstack/router-plugin": "^1.131.27",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",
