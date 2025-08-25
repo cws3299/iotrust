@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "MoonPay",
+    "icon": "https://raw.githubusercontent.com/KyungeunKim/iotrust-frontend-homework/main/images/icon_moonpay.png",
+    "url": "https://buy.moonpay.com",
+    "englishDescription": "MoonPay offers simple and safer way to buy crypto instantly using VISA/Mastercard payment",
+    "koreanDescription": "",
+    "useableNetwork": [],
+    "displayCondition": {
+      "language": "en",
+      "os": "ios",
+      "env": "all"
+    }
+  },
+  {
+    "id": 8,
+    "name": "OpenSea",
+    "icon": "https://raw.githubusercontent.com/KyungeunKim/iotrust-frontend-homework/main/images/icon_opensea.png",
+    "url": "https://opensea.io/",
+    "englishDescription": "OpenSea is a marketplace for digital goods, including collectibles, game items, digital art, and other digital assets backed by blockchain such as Ethereum.",
+    "koreanDescription": "OpenSea는 수집품, 게임 아이템, 디지털 아트와 같은 이더리움 기반의 디지털 상품 및 디지털 자산을 거래할 수 있는 마켓 플레이스입니다.",
+    "useableNetwork": ["Ethereum", "Polygon"],
+    "displayCondition": {
+      "language": "all",
+      "os": "all",
+      "env": "all"
+    }
+  }
+]
