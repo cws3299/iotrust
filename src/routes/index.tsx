@@ -1,5 +1,6 @@
 import { Banner } from "@/entities/banner/ui/Banner";
 import { BannerLoadingSpinner } from "@/entities/banner/ui/BannerLoadingSpinner";
+import { Service } from "@/entities/service/ui/Service";
 import { createFileRoute } from "@tanstack/react-router";
 import { Suspense } from "react";
 
@@ -16,11 +17,12 @@ function Index() {
         </header>
         <div className="flex-1 overflow-y-scroll">
           <Suspense fallback={<BannerLoadingSpinner />}>
-            <Banner />;
+            <Banner />
           </Suspense>
-
           <div>즐겨찾기</div>
-          <div>목록</div>
+          <Suspense>
+            <Service />
+          </Suspense>
         </div>
         <footer className="h-[48px] border-t bg-white z-50">
           <div className="mx-auto max-w-[480px] h-full flex items-center justify-center">

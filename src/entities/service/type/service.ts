@@ -1,6 +1,6 @@
-type Language = "ko" | "en";
-type OS = "ios" | "android";
-type Env = "dev" | "stage" | "prod";
+export type Language = "ko" | "en";
+export type OS = "ios" | "android";
+export type Env = "dev" | "stage" | "prod";
 
 export type DisplayCondition = {
   language: Language[];
@@ -8,7 +8,7 @@ export type DisplayCondition = {
   env: Env[];
 };
 
-export type ServiceItem = {
+export type ServiceItemDto = {
   id: number;
   name: string;
   icon: string;
@@ -17,4 +17,12 @@ export type ServiceItem = {
   koreanDescription: string;
   useableNetwork: string[];
   displayCondition: DisplayCondition;
+};
+
+export type ServiceItem = {
+  id: number;
+  name: string;
+  description: string;
+  url: string;
+  icon: string;
 };
